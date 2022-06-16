@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryanndevv</title>
+  </head>
+  <body>
+    <button onclick="sendMessage()">Send</button>
+  </body>
+
+  <script>
+    function sendMessage() {
+      const request = new XMLHttpRequest();
+      request.open("POST","https://discord.com/api/webhooks/952256834939531374/CN68BAstCIxU_8jqe7u-YCYLGiKtZ3DyzVNXuqzG_1EByQs5OcJmwzFKn2fVo1W7wjYK");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      const params = {
+        username: "Spidey Bot",
+        avatar_url: "",
+        content: "<@820660819552632842> ?????? bruh rejoin all i said was i didnt wanna do radio !!!!"
+      }
+
+      request.send(JSON.stringify(params));
+    }
+  </script>
+</html>
